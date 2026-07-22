@@ -66,7 +66,7 @@ class MemoryClassifier {
 
         const probIa = this.sigmoide(sumaPonderada);
         
-        // Ordena os termos que mais puxaram para IA (+) ou Humano (-)
+
         analiseTermos.sort((a, b) => Math.abs(b.impacto) - Math.abs(a.impacto));
 
         return {
@@ -92,11 +92,11 @@ class MemoryClassifier {
         const texto = fs.readFileSync(arqTexto, 'utf-8').trim();
 
         if (texto.length < 5) {
-            console.log("⚠️ O texto.txt está muito curto para uma análise confiável.");
+            console.log(" O texto.txt está muito curto para uma análise confiável.");
             return;
         }
 
-        console.log(`\n📄 Analisando "texto.txt" (${texto.length} caracteres)...`);
+        console.log(`\n Analisando "texto.txt" (${texto.length} caracteres)...`);
         
         const resultado = classificador.analisarTexto(texto);
         const pctIa = (resultado.probabilidadeIa * 100).toFixed(1);
