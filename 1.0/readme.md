@@ -1,3 +1,6 @@
+16569 pesos
+
+
 Como rodar?
 1: git clone https://github.com/pitocoofc/NexosDetecte.git
 2: cd NexosDetecte
